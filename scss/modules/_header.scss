@@ -1,0 +1,90 @@
+// Header
+.header {
+	background: $secondary;
+	padding: $lh /2 0;
+	&__wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	// Profile
+	&__profile {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+	}
+	&__wrapper-avatar {
+		font-size: 0;
+		line-height: 1;
+		display: inline-block;
+		margin-right: $lh / 2;
+	}
+	&__avatar {
+		width: 45px;
+		height: 45px;
+		@include m {
+			width: 52px;
+			height: 52px;
+		}
+		@include l {
+			width: 57px;
+			height: 57px;	
+		}
+	}
+	&__text {
+		display: block;
+		font-size: 12px;
+		line-height: 16px;
+		@include m {
+			display: inline;
+			font-size: 14px;
+			line-height: 18px;
+		}
+		@include xl {
+			display: inline;
+			font-size: 16px;
+			line-height: 22px;
+		}
+	}
+	&__name {
+		display: block;
+		font-size: 14px;
+		line-height: 18px;
+		font-weight: 700;
+		@include m {
+			display: inline;
+			font-size: 14px;
+			line-height: 18px;
+		}
+		@include xl {
+			display: inline;
+			font-size: 16px;
+			line-height: 22px;
+		}
+	}
+
+	// Logo
+	&__wrapper-logo {
+		display: flex;
+		align-items: center;
+	}
+	&__logo-line-one {
+		font-size: 16px;
+		line-height: 18px;
+		@include xl {
+			font-size: 18px;
+			line-height: 24px;
+		}
+	}
+	&__logo-line-two {
+		font-size: 16px;
+		line-height: 18px;
+		font-weight: 700;
+		@include xl {
+			font-size: 18px;
+			line-height: 24px;
+		}
+	}
+
+}

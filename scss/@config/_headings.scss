@@ -1,0 +1,92 @@
+// Headings
+.heading--1 {
+	font-size: 32px;
+	line-height: 38px;
+	font-weight: 700;
+	@include l {
+		font-size: 44px;
+		line-height: 44px;
+	}
+	@include xl {
+		font-size: 48px;
+		line-height: 48px;
+	}
+}
+.heading--2 {
+	font-size: 26px;
+	line-height: 32px;
+	font-weight: 700;
+	@include l {
+		font-size: 30px;
+		line-height: 38px;
+	}
+	@include xl {
+		font-size: 36px;
+		line-height: 40px;
+	}
+}
+.heading--3 {
+	font-size: 22px;
+	line-height: 28px;
+	font-weight: 700;
+	@include l {
+		font-size: 24px;
+		line-height: 30px;
+	}
+	@include xl {
+		font-size: 26px;
+		line-height: 32px;
+	}
+}
+.heading--4 {
+	font-size: 18px;
+	line-height: 24px;
+	font-weight: 700;
+	@include l {
+		font-size: 20px;
+		line-height: 26px;
+	}
+	@include xl {
+		font-size: 22px;
+		line-height: 28px;
+	}
+}
+.heading--5 {
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: 700;
+	@include l {
+		font-size: 18px;
+		line-height: 26px;
+	}
+	@include xl {
+		font-size: 20px;
+		line-height: 28px;
+	}
+}
+.heading--6 {
+	font-size: 14px;
+	line-height: 22px;
+	font-weight: 700;
+	@include l {
+		font-size: 16px;
+		line-height: 24px;
+	}
+}
+.caption {
+	font-size: 12px;
+	line-height: 20px;
+	@include l {
+		font-size: 14px;
+		line-height: 22px;
+	}
+}
+.label {
+	font-size: 10px;
+	line-height: 20px;
+	font-weight: 700;
+	@include l {
+		font-size: 12px;
+		line-height: 22px;
+	}
+}
