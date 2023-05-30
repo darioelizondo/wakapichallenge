@@ -1,0 +1,48 @@
+// Recommendation slide
+.recommendation__slide {
+
+	// Inner
+	&-inner {
+		position: relative;
+		border-radius: 12px;
+		text-align: center;
+		overflow: hidden;
+		padding: calc( $lh / 3 );
+		&:hover .recommendation__slide-icon {
+			@include l {
+				top: 10px;
+				right: 10px;
+			}
+		}
+		&:hover .recommendation__slide-image {
+			transform: scale( 1.09 );
+		}
+	}
+
+	// Title
+	&-title {
+		font-weight: 400;
+	}
+
+	// Image
+	&-image {
+		transition: transform .3s ease;
+	}
+
+	// Icon
+	&-icon {
+		width: 35px;
+		height: 35px;
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		transition: top .3s ease, right .3s ease;
+		@include l {
+			top: -50px;
+			right: -50px;
+			width: 40px;
+			height: 40px;
+		}
+	}
+
+}

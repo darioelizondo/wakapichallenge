@@ -1,0 +1,25 @@
+// Message
+.message {
+	display: none;
+	padding: calc( $lh / 2 ) 0;
+	margin-bottom: calc( $lh / 2 );
+	@include l {
+		padding: $lh 0;
+		margin-bottom: $lh;
+	}
+	&.active {
+		display: block;
+	}
+
+	// Inner
+	&__inner {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 8px
+	}
+
+	// Icon
+	&__icon {
+		display: inline-block;
+	}
+}

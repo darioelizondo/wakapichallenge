@@ -1,0 +1,55 @@
+// Tabs
+.tabs {
+	margin-bottom: $lh;
+	@include l {
+		margin-bottom: $lh * 2;
+	}
+
+	// Wrapper
+	&__wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		gap: calc( $lh / 2 );
+		@include l {
+			gap: $lh;
+		}
+	}
+
+	// Item
+	&__item {
+
+	}
+
+	// Link
+	&__tab-link {
+		font-size: 14px;
+		line-height: 20px;
+		font-weight: 700;
+		position: relative;
+		@include m {
+			font-size: 16px;
+			line-height: 22px;
+		}
+		@include l {
+			font-size: 18px;
+			line-height: 24px;
+		}
+		&:before {
+			content: '';
+			position: absolute;
+			bottom: -10px;
+			left: 0;
+			width: 0;
+			height: 3px;
+			background: $primary;
+			transition: width .3s ease;
+		}
+		&.active:before {
+			width: 100%;
+		}
+		&:hover:before {
+			width: 100%;
+		}
+	}
+
+}

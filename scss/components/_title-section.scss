@@ -1,0 +1,33 @@
+// Title section
+.title-section {
+	margin-bottom: calc( $lh / 2 );
+	@include l {
+		margin-bottom: $lh;
+	}
+
+	// Wrapper
+	&__inner {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		padding: calc( $lh / 2 ) 0;
+		@include l {
+			padding: $lh 0;
+		}
+	}
+
+	// Text
+	&__description {
+		font-size: 13px;
+		line-height: 18px;
+
+		@include l {
+			font-size: 14px;
+			line-height: 22px;
+		}
+		@include xl {
+			font-size: 16px;
+			line-height: 24px;
+		}
+	}
+}

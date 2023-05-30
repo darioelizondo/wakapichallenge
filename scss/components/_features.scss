@@ -1,0 +1,36 @@
+// Features
+.features {
+ 
+	// Wrapper
+	&__wrapper {
+		display: grid;
+		grid-template-columns: repeat( 2, minmax( 50px, 1fr ) );
+		grid-gap: 8px;
+		@include l {
+			grid-template-columns: repeat( 3, minmax( 50px, 1fr ) );
+			grid-gap: calc( $lh / 2 );
+		}
+	}
+
+	// Item
+	&__item {
+		display: flex;
+		gap: 5px;
+		padding: calc( $lh / 5 );
+		border-radius: 7px;
+	}
+
+	// Text
+	&__text {
+		font-size: 12px;
+		line-height: 16px;
+		@include m {
+			font-size: 14px;
+			line-height: 18px;
+		}
+		@include l {
+			font-size: 16px;
+			line-height: 20px;
+		}
+	}
+}

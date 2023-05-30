@@ -1,0 +1,75 @@
+// Tips
+.tips {
+	margin-bottom: $lh;
+	@include l {
+		margin-bottom: $lh * 2;
+	}
+
+	// Wrapper
+	&__wrapper {
+		display: grid;
+		grid-template-columns: repeat( 3, minmax( 50px, 1fr ) );
+		grid-column-gap: 8px;
+		@include m {
+			grid-template-columns: repeat( 8, minmax( 26px, 1fr ) );
+		}
+		@include l {
+			grid-template-columns: repeat( 12, minmax( 40px, 1fr ) );
+			grid-column-gap: calc( $lh / 2 );
+		}
+		@include xl {;
+			grid-column-gap: $lh;
+		}
+	}
+
+	// Tip
+	&__tip {
+		@include m {
+			grid-column: span 2;
+		}
+		@include l {
+			grid-column: span 3;
+		}
+		@include xl {
+			grid-column: span 2;
+		}
+	}
+
+	// Title
+	&__title {
+		font-size: 14px;
+		line-height: 20px;
+		font-weight: 700;
+		position: relative;
+		@include m {
+			font-size: 16px;
+			line-height: 22px;
+		}
+		@include l {
+			font-size: 18px;
+			line-height: 24px;
+		}
+	}
+
+	// Caption
+	&__caption {
+		color: #777777;
+		font-size: 11px;
+		line-height: 16px;
+		font-weight: 400;
+		position: relative;
+		@include m {
+			font-size: 13px;
+			line-height: 18px;
+		}
+		@include l {
+			font-size: 14px;
+			line-height: 20px;
+		}
+		@include xl {
+			font-size: 16px;
+			line-height: 20px;
+		}
+	}
+
+}

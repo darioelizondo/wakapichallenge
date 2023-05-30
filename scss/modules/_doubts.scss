@@ -1,0 +1,97 @@
+// Doubts
+.doubts {
+	margin-bottom: $lh * 3;
+	@include l {
+		margin-bottom: $lh * 4;
+	}
+
+	// Wrapper
+	&__wrapper {
+		border-radius: 12px;
+		padding: calc( $lh / 2 );
+		@include l {
+			padding: $lh;
+		}
+	}
+
+	// Inner
+	&__link {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 8px;
+		@include l {
+			gap: calc( $lh / 2 );
+		}
+		@include xl {
+			gap: $lh;
+		}
+		&:hover .doubts__icon {
+			transform: translateX( 10px );
+		}
+	}
+
+	// Wrapper image
+	&__wrapper-image {
+		flex: 0 0 auto;
+		font-size: 0;
+		line-height: 1;
+	}
+
+	// Content
+	&__content {
+		flex: 1 1 60%;
+	}
+
+	// Icon
+	&__wrapper-icon {
+		flex: 0 0 5%;
+		text-align: right;
+	}
+
+	&__icon {
+		width: 10px;
+		transition: transform .3s ease;
+	}
+
+	// Title
+	&__title {
+		font-size: 14px;
+		line-height: 22px;
+		font-weight: 700;
+		@include m {
+			font-size: 16px;
+			line-height: 24px;
+		}
+		@include l {
+			font-size: 18px;
+			line-height: 28px;
+		}
+	}
+
+	// Text
+	&__text {
+		font-size: 12px;
+		line-height: 16px;
+		@include m {
+			font-size: 14px;
+			line-height: 18px;
+		}
+		@include l {
+			font-size: 16px;
+			line-height: 20px;
+		}
+	}
+
+	// Image
+	&__image {
+		width: 85px;
+		height: auto;
+		@include m {
+			width: 100px;
+		}
+		@include l {
+			width: 125px;
+		}
+	}
+}

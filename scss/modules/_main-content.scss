@@ -1,0 +1,16 @@
+// Main content
+.main-content {
+	margin-bottom: calc( $lh / 2 );
+	@include l {
+		margin-bottom: $lh;
+	}
+	
+	@include m {
+		display: grid;
+		grid-template-columns: repeat( 2, minmax( 100px, 1fr ) );
+		grid-column-gap: calc( $lh / 2 );
+	}
+	@include l {
+		grid-column-gap: $lh;
+	}
+}

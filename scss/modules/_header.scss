@@ -1,7 +1,14 @@
 // Header
 .header {
+	position: relative;
 	background: $secondary;
-	padding: $lh /2 0;
+	padding: calc( $lh / 3 ) 0;
+	margin-bottom: $lh;
+	z-index: 999;
+	@include l {
+		margin-bottom: $lh * 1.5;
+	}
+
 	&__wrapper {
 		display: flex;
 		flex-wrap: wrap;
@@ -10,28 +17,34 @@
 
 	// Profile
 	&__profile {
-		display: flex;
+		display: none;
 		flex-wrap: wrap;
 		align-items: center;
+		&.active {
+			display: flex;
+		}
 	}
+
 	&__wrapper-avatar {
 		font-size: 0;
 		line-height: 1;
 		display: inline-block;
-		margin-right: $lh / 2;
+		margin-right: calc( $lh / 2 );
 	}
+
 	&__avatar {
 		width: 45px;
 		height: 45px;
 		@include m {
-			width: 52px;
-			height: 52px;
+			width: 50px;
+			height: 50px;
 		}
-		@include l {
-			width: 57px;
-			height: 57px;	
+		@include xl {
+			width: 55px;
+			height: 55px;	
 		}
 	}
+
 	&__text {
 		display: block;
 		font-size: 12px;
@@ -47,6 +60,7 @@
 			line-height: 22px;
 		}
 	}
+
 	&__name {
 		display: block;
 		font-size: 14px;
@@ -64,11 +78,60 @@
 		}
 	}
 
+	// Back 
+	&__back {
+		display: none;
+		align-items: center;
+		&.active {
+			display: flex;
+		}
+	}
+
+	&__icon-back {
+		transform: rotate( 180deg );
+	}
+
+	// Nav
+	&__nav {
+		display: none;
+		@include l {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			gap: 10px;
+		}
+		@include xl {
+			gap: calc( $lh / 2 );
+		}
+	}
+
+	&__link {
+		font-size: 12px;
+		line-height: 20px;
+		display: flex;
+		align-items: center;
+		transition: transform .3s ease;
+		&:hover {
+			@include l {
+				transform: translateX( 5px );
+			}
+		}
+		@include xl {
+			font-size: 14px;
+			line-height: 22px;
+		}
+	}
+
+	&__icon {
+		display: inline-block;
+	}
+
 	// Logo
 	&__wrapper-logo {
 		display: flex;
 		align-items: center;
 	}
+
 	&__logo-line-one {
 		font-size: 16px;
 		line-height: 18px;
@@ -77,6 +140,7 @@
 			line-height: 24px;
 		}
 	}
+
 	&__logo-line-two {
 		font-size: 16px;
 		line-height: 18px;

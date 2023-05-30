@@ -1,0 +1,21 @@
+// Title 
+.title {
+	padding-bottom: $lh;
+	@include l {
+		padding-bottom: $lh;
+	}
+
+	// Subtitle
+	&__subtitle {
+		font-size: 13px;
+		line-height: 21px;
+		@include l {
+			font-size: 15px;
+			line-height: 23px;
+		}
+		@include xl {
+			font-size: 16px;
+			line-height: 24px;
+		}
+	}
+}

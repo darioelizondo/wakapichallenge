@@ -1,0 +1,53 @@
+// Gallery
+.gallery {
+	margin-bottom: $lh;
+	@include l {
+		margin-bottom: $lh * 2;
+	}
+
+	// Title
+	&__title {
+		padding-bottom: calc( $lh / 2 );
+		@include l {
+			padding-bottom: $lh;
+		}
+	}
+
+	// Inner
+	&__inner {
+		display: grid;
+		grid-template-columns: repeat( 2, minmax( 50px, 1fr ) );
+		grid-gap: 8px;
+		@include m {
+			grid-template-columns: repeat( 4, minmax( 26px, 1fr ) );
+		}
+		@include l {
+			grid-gap: calc( $lh / 2 );
+		}
+		@include xl {
+			grid-gap: $lh;
+		}
+	}
+
+	// Link image
+	&__link-image {
+		font-size: 0;
+		line-height: 1;
+	}
+
+	// Image
+	&__wrapper-image {
+		font-size: 0;
+		line-height: 1;
+		border-radius: 12px;
+		overflow: hidden;
+	}
+	&__image {
+		display: block;
+		margin: 0 auto;
+		transition: transform .3s ease;
+		&:hover {
+			transform: scale( 1.09 );
+		}
+	}
+}

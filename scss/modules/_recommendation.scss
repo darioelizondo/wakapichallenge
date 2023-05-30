@@ -1,0 +1,43 @@
+// Recommendation
+.recommendation {
+	padding: $lh 0;
+	margin-bottom: $lh;
+	@include l {
+		padding: $lh * 1.5 0;
+		margin-bottom: $lh * 1.5;
+	}
+
+	// Title {
+	&__title {
+		text-align: center;
+		padding-bottom: calc( $lh / 2 );
+	}
+
+	// Slider
+	&__slider {
+		margin-right: -30px !important;
+		@include m {
+			margin-right: 0;
+		}
+	}
+
+	// Wrapper slider
+	&__wrapper-slider {
+		@include l {
+			display: grid !important;
+			grid-template-columns: repeat( 4, minmax( 100px, 1fr ) );
+			grid-gap: calc( $lh / 2 );
+		}
+		@include l {
+			grid-gap: $lh;
+		}
+	}
+
+	// Link
+	&__link {
+		display: inline-block;
+		font-size: 0;
+		line-height: 1;	
+	}
+
+}

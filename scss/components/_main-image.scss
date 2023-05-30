@@ -1,0 +1,6 @@
+.main-image {
+	margin: -$lh -30px 0 -30px;
+	@include m {
+		margin: 0;
+	}
+}

@@ -6,5 +6,22 @@
 @import '@config/color';
 @import '@config/headings';
 
+// Components 
+@import 'components/recomendation-slide';
+@import 'components/message';
+@import 'components/main-image';
+@import 'components/title-section';
+@import 'components/features';
+
 // Modules
 @import 'modules/header';
+@import 'modules/footer';
+@import 'modules/title';
+@import 'modules/card';
+@import 'modules/recommendation';
+@import 'modules/doubts';
+@import 'modules/modal-plant';
+@import 'modules/main-content';
+@import 'modules/tabs';
+@import 'modules/tips';
+@import 'modules/gallery';
